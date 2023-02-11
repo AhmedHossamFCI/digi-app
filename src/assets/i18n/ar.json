@@ -1,0 +1,7 @@
+{
+  "Login": {
+    "WelcomeBack": "مرحبا",
+    "LoginButton": "تسجيل الدخول",
+    "UserNameOrPasswordInvalid": "اسم المستخدم او كلمة المرور غير صحيحين"
+  }
+}

@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>{{translate('WelcomeBack')|translate}}</mat-card-title>
+  <mat-card-content>
+    <form #loginForm="ngForm">
+      <div>
+        <mat-form-field>
+          <input type="text" matInput id="username" name="username" aria-describedby="username"
+            [placeholder]="translate('Username')|translate" autocomplete="username" [(ngModel)]="model.username"
+            #username="ngModel">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input type="password" matInput id="password" name="password" [placeholder]="translate('Password')|translate"
+            autocomplete="current-password" [(ngModel)]="model.password" #password="ngModel">
+        </mat-form-field>
+      </div>
+
+      <p *ngIf="error" class="error">
+        {{ error|translate }}
+      </p>
+
+      <div class="button">
+        <button type="submit" (click)="login()" mat-raised-button
+          color="primary">{{translate('LoginButton')|translate}}</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
